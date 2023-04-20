@@ -6,6 +6,7 @@ import About from "@/components/UI/About";
 import Portfolio from "@/components/UI/Portfolio";
 import Testimonial from "@/components/UI/Testimonial";
 import Contact from "@/components/UI/Contact";
+import { Skills } from "@/components/UI/Skills";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Services />
       <About />
       <Portfolio />
+      <Skills />
       <Testimonial />
       <Contact />
     </Fragment>

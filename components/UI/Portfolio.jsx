@@ -29,7 +29,7 @@ const Portfolio = () => {
         <Container>
             <Row>
                 <Col lg='6' md='6' className='mb-5'>
-                    <SectionSubtitle subtitle='Mi Portafolio' />
+                    <SectionSubtitle subtitle='Mis Proyectos' />
                     <h4 className='mt-4'>Lorem ipsum dolor sit amet.</h4>
                 </Col>
 

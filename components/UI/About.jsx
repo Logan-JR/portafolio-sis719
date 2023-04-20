@@ -43,7 +43,7 @@ const About = () => {
             </div>
             <div className="mt-5">
               <button className="primary__btn">
-                <Link href='#portfolio'>Mi Portafolio</Link>
+                <Link href='#portfolio'>Mis Proyecto</Link>
               </button>
               <button className="secondary__btn">
                 <Link href='#' className='ri-file-line'> Descargar CV</Link>

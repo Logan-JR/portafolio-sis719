@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { Container } from 'reactstrap';
 import classes from './header.module.css';
 import Link from 'next/link';
@@ -18,7 +18,7 @@ const NAV__LINK = [
   },
   {
     path: "#portfolio",
-    display: "Portafolio",
+    display: "Proyectos",
   },
   {
     path: "#contact",
@@ -29,7 +29,7 @@ const NAV__LINK = [
 const Header = () => {
 
     const headerRef = useRef(null);
-
+    const [dark, setDark] = useState(false);
     const menuRef = useRef(null);
 
     const headerFunc = () => {
@@ -63,12 +63,14 @@ const Header = () => {
                                 </Link>
                             ))
                         }
-                        {/* <div className={`${classes.nav__right}`}>
+                        <div className={`${classes.nav__right}`}>
                             <p className='d-flex align-items-center gap-2 mb-0'>
-                                {' '}
-                                <i className="ri-phone-line"></i> +591 69641997{' '}
+                                <button className={dark?`${classes.switch} ${classes.active}`:`${classes.switch}`} onClick={() => setDark(!dark)}>
+                                    <span><i class="ri-sun-fill"></i></span>
+                                    <span><i class="ri-moon-fill"></i></span>
+                                </button>
                             </p>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
                 <span className={`${classes.mobile__menu}`}>

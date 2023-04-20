@@ -22,8 +22,8 @@
 
 .hero__skills {
   text-align: left;
-  width: 130px;
-  padding: 10px 20px;
+  /* width: 130px; */
+  padding: 5px 20px;
   position: absolute;
   top: 50%;
   left: 22%;
@@ -36,15 +36,23 @@
 .hero__skills h6 {
   background: transparent;
   color: #fff;
+  font-size: 1.1rem;
 }
 
-.hero__skills span i {
+.hero__skills i {
   color: #01d293;
   background: transparent;
+  font-size: 2.5rem;
 }
 
-.hero__skills span {
+.hero__skills i:hover {
+  color: #01d293;
+  font-size: 3rem;
+}
+
+.hero__skills a {
   background: transparent;
+  text-decoration: none;
 }
 
 .hero__experience {
@@ -75,6 +83,8 @@
   color: #01d293;
   background: #808dad70;
   border-radius: 5px;
+  font-size: 1.6rem;
+  color: #f6f608;;
 }
 
 @media only screen and (max-width: 992px) {
