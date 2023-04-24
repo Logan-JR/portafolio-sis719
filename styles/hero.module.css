@@ -22,7 +22,6 @@
 
 .hero__skills {
   text-align: left;
-  /* width: 130px; */
   padding: 5px 20px;
   position: absolute;
   top: 50%;
@@ -85,6 +84,11 @@
   border-radius: 5px;
   font-size: 1.6rem;
   color: #f6f608;;
+}
+@media only screen and (max-width: 1199px){
+  .hero__skills {
+    left: 5%;
+  }
 }
 
 @media only screen and (max-width: 992px) {

@@ -21,8 +21,8 @@ const Services = () => {
                 
                 <Col lg='6' md='6' className={`${classes.service__title}`}>
                     <SectionSubtitle subtitle='Servicios'/>
-                    <h3 className='mb-0 mt-4'>Lorem, ipsum,</h3>
-                    <h3 className='mb-4'>Lorem, ipsum</h3>
+                    <h3 className='mb-0 mt-4'>Experiencia Laboral</h3>
+                    <h4 className='mb-4'></h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quaerat? Officia quibusdam numquam dolore quas voluptates labore porro quasi dolorem voluptatibus nemo neque et fugiat sit velit minima obcaecati nulla hic cum, reprehenderit officiis voluptatum? Nulla esse ad sunt excepturi.</p>
                     
                 </Col>

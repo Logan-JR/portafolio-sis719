@@ -46,7 +46,7 @@ const About = () => {
                 <Link href='#portfolio'>Mis Proyecto</Link>
               </button>
               <button className="secondary__btn">
-                <Link href='#' className='ri-file-line'> Descargar CV</Link>
+                <Link href='#skills'>Mis Habilidades</Link>
               </button>
             </div>
           </Col>

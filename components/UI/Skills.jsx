@@ -1,7 +1,6 @@
 import React from 'react'
-import { Container, Row, Col } from 'reactstrap'
+import { Container, Row } from 'reactstrap'
 import SectionSubtitle from './SectionSubtitle'
-import ServicesItem from './ServicesItem'
 import classes from '../../styles/skills.module.css'
 
 export const Skills = () => {
@@ -9,27 +8,41 @@ export const Skills = () => {
     <section id="skills">
         <Container>
             <Row>
-                <Col lg='6' md='6'>
-                    <SectionSubtitle subtitle='My Skills'/>
-                    <div className={`${classes.services__skills}`}>
-                        <div>
-                            <ServicesItem title='React' icon='ri-reactjs-line' />
-                            <ServicesItem title='Html' icon='ri-html5-line' />
-                        </div>
-                        <div>
-                            <ServicesItem title='Css' icon='ri-css3-line' />
-                            <ServicesItem title='JavaScript' icon='ri-javascript-line' />
-                        </div>
-                        <div>
-                            <ServicesItem title='Git' icon='ri-git-pull-request-line' />
-                            <ServicesItem title='Vue' icon='ri-vuejs-line' />
-                        </div>
-                        <div>
-                            <ServicesItem title='Bootstrap' icon='ri-bootstrap-line' />
-                            <ServicesItem title='Blender' icon='ri-blender-line' />
-                        </div>
+                <SectionSubtitle subtitle='My Skills'/>
+                <div className={`${classes.skills}`}>
+                    <div className={`${classes.skills__item}`}>
+                        <span><i className='ri-reactjs-line'></i></span>
+                        <h5>React</h5>
                     </div>
-                </Col>
+                    <div className={`${classes.skills__item}`}>
+                        <span><i className='ri-html5-line'></i></span>
+                        <h5>Html</h5>
+                    </div>
+                    <div className={`${classes.skills__item}`}>
+                        <span><i className='ri-css3-line'></i></span>
+                        <h5>Css</h5>
+                    </div>
+                    <div className={`${classes.skills__item}`}>
+                        <span><i className='ri-javascript-line'></i></span>
+                        <h5>JavaScript</h5>
+                    </div>
+                    <div className={`${classes.skills__item}`}>
+                        <span><i className='ri-git-pull-request-line'></i></span>
+                        <h5>Git</h5>
+                    </div>
+                    <div className={`${classes.skills__item}`}>
+                        <span><i className='ri-vuejs-line'></i></span>
+                        <h5>Vue</h5>
+                    </div>
+                    <div className={`${classes.skills__item}`}>
+                        <span><i className='ri-bootstrap-line'></i></span>
+                        <h5>Bootstrap</h5>
+                    </div>
+                    <div className={`${classes.skills__item}`}>
+                        <span><i className='ri-blender-line'></i></span>
+                        <h5>Blender</h5>
+                    </div>
+                </div>
             </Row>
         </Container>
     </section>
