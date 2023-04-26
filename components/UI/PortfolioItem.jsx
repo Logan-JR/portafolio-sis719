@@ -1,15 +1,17 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
 import classes from '../../styles/portfolio-item.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import ThemeContext from '../context/ThemeContext';
 
 const PortfolioItem = (props) => {
     const { title, img, liveUrl, keyword } = props.item;
+    const {theme} = useContext(ThemeContext)
   return (
-    <div className={`${classes.portfolio__item}`}>
+    <div className={theme?`${classes.portfolio__item}`:`${classes.portfolio__item} bg__light`}>
         <div className='bg-transparent'>
-            <h6> {title} </h6>
+            <h6 className={theme?'':'light__dark'}> {title} </h6>
             {
                 keyword.map((item, index) => (
                     <span className={`${classes.portfolio__keyword}`} key={index}>

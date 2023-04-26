@@ -1,13 +1,15 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Image from 'next/image';
 import SectionSubtitle from './SectionSubtitle';
 import network from '../../public/images/Connected world.png';
 import Slider from 'react-slick';
 import classes from '../../styles/testimonial.module.css';
+import ThemeContext from '../context/ThemeContext';
 
 const Testimonial = () => {
+  const {theme} = useContext(ThemeContext)
   const settings = {
     dots: false,
     autoplay: true,
@@ -28,14 +30,14 @@ const Testimonial = () => {
 
           <Col lg='6' md='6'>
             <SectionSubtitle subtitle='Testimonios' />
-            <h4 className='mt-4 mb-5'>Testimonios de Clientes</h4>
+            <h4 className={theme?'mt-4 mb-5':'mt-4 mb-5 light__dark'}>Testimonios de Clientes</h4>
 
             <Slider {...settings}>
               <div className={`${classes.testimonial__item}`}>
                 <div className={`${classes.testimonial__client}`}>
                   <Image alt='client-img' src='/images/img-01.jpg' width='50' height='50' className='rounded-2' />
                   <div>
-                    <h6>Anton Chigurh</h6>
+                    <h6 className={theme?'':'light__dark'}>Anton Chigurh</h6>
                     <h6>Software Engineer</h6>
                   </div>
                 </div>
@@ -45,7 +47,7 @@ const Testimonial = () => {
                 <div className={`${classes.testimonial__client}`}>
                   <Image alt='client-img' src='/images/hero2.jpg' width='50' height='50' className='rounded-2' />
                   <div>
-                    <h6>Homelander</h6>
+                    <h6 className={theme?'':'light__dark'}>Homelander</h6>
                     <h6>Web Developer</h6>
                   </div>
                 </div>
@@ -55,7 +57,7 @@ const Testimonial = () => {
                 <div className={`${classes.testimonial__client}`}>
                   <Image alt='client-img' src='/images/img-03.jpg' width='50' height='50' className='rounded-2' />
                   <div>
-                    <h6>Otro Anton Chigurh</h6>
+                    <h6 className={theme?'':'light__dark'}>Otro Anton Chigurh</h6>
                     <h6>Financial Accountant</h6>
                   </div>
                 </div>

@@ -1,15 +1,17 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import SectionSubtitle from './SectionSubtitle';
 import classes from '../../styles/portfolio.module.css';
 import PortfolioItem from './PortfolioItem';
 import portfolioData from '../data/portfolio';
+import ThemeContext from '../context/ThemeContext';
 
 const Portfolio = () => {
 
     const [ filter, setFilter ] = useState('Mobile App');
     const [ data, setData ] = useState();
+    const {theme} = useContext(ThemeContext)
 
     useEffect(() => {
         if(filter === 'Mobile App'){
@@ -30,16 +32,16 @@ const Portfolio = () => {
             <Row>
                 <Col lg='6' md='6' className='mb-5'>
                     <SectionSubtitle subtitle='Mis Proyectos' />
-                    <h4 className='mt-4'>Lorem ipsum dolor sit amet.</h4>
+                    <h4 className={theme?'mt-4':'mt-4 light__dark'}>Lorem ipsum dolor sit amet.</h4>
                 </Col>
 
                 <Col lg='6' md='6'>
                     <div className={`${classes.tab__btns} text-end`}>
-                        <button className={`${filter === 'Mobile App'? active : ''} secondary__btn text-white`}
+                        <button className={`${filter === 'Mobile App'? active : ''} ${theme?'secondary__btn text-white':'secondary__btn light__dark'}`}
                         onClick={() => setFilter('Mobile App')}>
                             Aplicaciones Moviles
                         </button>
-                        <button className={`${filter === 'Web Design'? active : ''} secondary__btn text-white`}
+                        <button className={`${filter === 'Web Design'? active : ''} ${theme?'secondary__btn text-white':'secondary__btn light__dark'}`}
                         onClick={() => setFilter('Web Design')}>
                             Aplicaciones Web
                         </button>

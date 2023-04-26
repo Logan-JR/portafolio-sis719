@@ -1,7 +1,8 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useEffect, useContext } from 'react'
 import { Container } from 'reactstrap';
 import classes from './header.module.css';
 import Link from 'next/link';
+import ThemeContext from '../context/ThemeContext';
 
 const NAV__LINK = [
   {
@@ -33,7 +34,7 @@ const NAV__LINK = [
 const Header = () => {
 
     const headerRef = useRef(null);
-    const [dark, setDark] = useState(false);
+    const {theme, handleTheme} = useContext(ThemeContext);
     const menuRef = useRef(null);
 
     const headerFunc = () => {
@@ -45,13 +46,15 @@ const Header = () => {
     }
     useEffect(()=>{
         window.addEventListener('scroll', headerFunc);
+        if(theme) document.body.style.backgroundColor = "#0e1630";
+        else document.body.style.backgroundColor = "#F6F1E9";
         return () => window.removeEventListener('scroll', headerFunc);
-    },[])
+    },[theme])
 
     const toggleMenu = () => menuRef.current.classList.toggle(`${classes.menu__active}`);
 
   return (
-    <header className={`${classes.header}`} ref={headerRef}>
+    <header className={theme?`${classes.header}`:`${classes.header} bg__o`} ref={headerRef}>
         <Container>
             <div className={`${classes.nav__wrapper}`}>
                 <div className={`${classes.logo}`}>
@@ -69,9 +72,9 @@ const Header = () => {
                         }
                         <div className={`${classes.nav__right}`}>
                             <p className='d-flex align-items-center gap-2 mb-0'>
-                                <button className={dark?`${classes.switch} ${classes.active}`:`${classes.switch}`} onClick={() => setDark(!dark)}>
-                                    <span><i className="ri-sun-fill"></i></span>
+                                <button className={theme?`${classes.switch} ${classes.active}`:`${classes.switch}`} onClick={handleTheme}>
                                     <span><i className="ri-moon-fill"></i></span>
+                                    <span><i className="ri-sun-fill"></i></span>
                                 </button>
                             </p>
                         </div>

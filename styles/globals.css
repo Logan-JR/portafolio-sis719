@@ -16,7 +16,7 @@ a {
 
 * {
   box-sizing: border-box;
-  background: #0e1630; /* Color de Fondo */
+  /* background: #0e1630; Color de Fondo */
 }
 
 p {
@@ -40,6 +40,26 @@ footer {
   padding-bottom: 10px;
   padding-top: 60px;
   border-top: 1px solid #171f38;
+}
+
+.light {
+  color: #01d293 !important;
+}
+
+.light__dark {
+  color: #0e1630 !important;
+}
+
+.bg__light {
+  background: #01d293 !important;
+}
+
+.bg__a {
+  background: #9BA4B5 !important;
+}
+
+.bg__o {
+  background: #0e1630;
 }
 
 .primary__btn {

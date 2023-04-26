@@ -1,19 +1,21 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Link from 'next/link';
 import SectionSubtitle from './SectionSubtitle';
 import classes from '../../styles/contact.module.css'
 import Form from './Form';
+import ThemeContext from '../context/ThemeContext';
 
 const Contact = () => {
+  const {theme} = useContext(ThemeContext)
   return (
     <section id="contact" className={`${classes.contact}`}>
       <Container>
         <Row>
           <Col lg="6" md="6">
             <SectionSubtitle subtitle="Contáctame" />
-            <h3 className="mt-4 mb-4">Contactate conmigo</h3>
+            <h3 className={theme?'mt-4 mb-4':'mt-4 mb-4 light__dark'}>Contactate conmigo</h3>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
               voluptatum officiis inventore incidunt nostrum sunt excepturi

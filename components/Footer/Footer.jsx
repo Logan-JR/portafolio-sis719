@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Col, Container, Row } from 'reactstrap';
 import classes from './footer.module.css'
 import Link from 'next/link';
+import ThemeContext from '../context/ThemeContext';
 
 const NAV__LINK = [
   {
@@ -14,7 +15,7 @@ const NAV__LINK = [
   },
   {
     path: "#about",
-    display: "Acerca de",
+    display: "Acerca",
   },
   {
     path: "#portfolio",
@@ -30,6 +31,7 @@ const Footer = () => {
 
   const date = new Date();
   const year = date.getFullYear();
+  const {theme} = useContext(ThemeContext)
 
   return (
     <footer>
@@ -49,7 +51,7 @@ const Footer = () => {
           </Col>
           <Col lg='6' className={`${classes.footer__top}`}>
             <div className={`${classes.footer__creator}`}>
-              <h6>Creado por Logan-JR</h6>
+              <h6 className={theme?'':'light__dark'}>Creado por Logan-JR</h6>
             </div>
           </Col>
           {/* Footer abajo */}
