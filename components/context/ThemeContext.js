@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 const ThemeContext = createContext();
 
-const initialTheme = false;
+const initialTheme = true;
 
 const ThemeProvier = ({children}) => {
     const [theme, setTheme] = useState(initialTheme)
