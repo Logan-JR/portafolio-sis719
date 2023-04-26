@@ -36,7 +36,7 @@ const Hero = () => {
                             <Link href='#skills'><i className="ri-code-s-slash-line"></i></Link>
                         </div>
                         <div className={`${classes.hero__experience} d-flex align-items-center gap-3`}>
-                            <span><i class="ri-trophy-fill"></i></span>
+                            <span><i className="ri-trophy-fill"></i></span>
                             <div className='bg-transparent'>
                                 <h6>Experiencia</h6>
                                 <h5 className='mb-0'>0 Años</h5>

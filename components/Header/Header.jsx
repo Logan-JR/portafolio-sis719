@@ -9,16 +9,20 @@ const NAV__LINK = [
     display: "Inicio",
   },
   {
-    path: "#about",
-    display: "Acerca de",
-  },
-  {
     path: "#services",
     display: "Servicios",
   },
   {
+    path: "#about",
+    display: "Acerca de",
+  },
+  {
     path: "#portfolio",
     display: "Proyectos",
+  },
+  {
+    path: "#testimonial",
+    display: "Testimonios",
   },
   {
     path: "#contact",
@@ -66,8 +70,8 @@ const Header = () => {
                         <div className={`${classes.nav__right}`}>
                             <p className='d-flex align-items-center gap-2 mb-0'>
                                 <button className={dark?`${classes.switch} ${classes.active}`:`${classes.switch}`} onClick={() => setDark(!dark)}>
-                                    <span><i class="ri-sun-fill"></i></span>
-                                    <span><i class="ri-moon-fill"></i></span>
+                                    <span><i className="ri-sun-fill"></i></span>
+                                    <span><i className="ri-moon-fill"></i></span>
                                 </button>
                             </p>
                         </div>

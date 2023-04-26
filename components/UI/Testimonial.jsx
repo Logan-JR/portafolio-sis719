@@ -19,7 +19,7 @@ const Testimonial = () => {
     slideToScroll: 1
   }
   return (
-    <section>
+    <section id='testimonial'>
       <Container>
         <Row>
           <Col lg='6' md='6' className={`${classes.testimonial__img}`}>

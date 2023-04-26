@@ -9,20 +9,20 @@ const NAV__LINK = [
     display: "Inicio",
   },
   {
-    path: "#about",
-    display: "Acerca",
-  },
-  {
     path: "#services",
     display: "Servicios",
   },
   {
-    path: "#portfolio",
-    display: "Portafolio",
+    path: "#about",
+    display: "Acerca de",
   },
   {
-    path: "#contact",
-    display: "Contacto",
+    path: "#portfolio",
+    display: "Proyectos",
+  },
+  {
+    path: "#testimonial",
+    display: "Testimonios",
   },
 ];
 
